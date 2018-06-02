@@ -9,21 +9,20 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import com.driver.utils.Browser;
+import com.driver.utils.Browser.BrowserType;
+
 public class SampleWebdriver {
 
 	public static void main(String[] args) {
 
-		System.setProperty("webdriver.gecko.driver",
-				"D:\\Work\\Selenium Drivers\\geckodriver.exe");
-
 		WebDriver driver;
 		String baseUrl;
 		baseUrl = "http://www.salesforce.com/";
-		driver = new FirefoxDriver();
-		driver.manage().window().maximize();
-		driver.get(baseUrl);
+		driver = Browser.getInstance(Browser.BrowserType.Firefox, baseUrl);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		WebElement username = driver.findElement(By.xpath(".//a[@role='button']/span[contains(text(),'Login')]"));
+		WebElement username = driver.findElement(By
+				.xpath(".//a[@role='button']/span[contains(text(),'Login')]"));
 		username.click();
 
 		// Wait up to 10 seconds for a condition
@@ -40,7 +39,7 @@ public class SampleWebdriver {
 		driver.findElement(By.id("password")).sendKeys("sachinboob1!");
 		// driver.findElement(By.id("Login")).click();
 
-//		driver.close();
+		// driver.close();
 
 	}
 }
