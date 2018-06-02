@@ -5,22 +5,21 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 
-public class IEDemo {
+public class ChromeDriverDemo {
 
 	public static void main(String[] args) {
 
 		// Configurations as per -
 		// https://code.google.com/p/selenium/wiki/InternetExplorerDriver
 
-		String driverPath = "D:\\Work\\Selenium Drivers\\IEDriverServer_x64_3.9.0\\IEDriverServer.exe";
+		String driverPath = "D:\\Work\\Selenium Drivers\\chromedriver_win32\\chromedriver.exe";
 
-		System.setProperty("webdriver.ie.driver", driverPath);
+		System.setProperty("webdriver.chrome.driver", driverPath);
 
 		String baseURL = "http://book.theautomatedtester.co.uk/chapter1";
-		WebDriver driver = new InternetExplorerDriver();
+		WebDriver driver = new ChromeDriver();
 
 		driver.manage().timeouts().implicitlyWait(60L, TimeUnit.SECONDS);
 		driver.get(baseURL);
