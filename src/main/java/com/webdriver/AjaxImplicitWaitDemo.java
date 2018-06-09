@@ -20,7 +20,7 @@ public class AjaxImplicitWaitDemo {
 
 		String url = "http://dl.dropbox.com/u/55228056/AjaxDemo.html";
 
-		WebDriver driver = new FirefoxDriver(firefoxProfile);
+		WebDriver driver = new FirefoxDriver();
 
 		driver.manage().timeouts().implicitlyWait(20000, TimeUnit.MILLISECONDS);
 		driver.get(url);

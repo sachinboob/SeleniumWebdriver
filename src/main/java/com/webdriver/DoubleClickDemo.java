@@ -23,7 +23,7 @@ public class DoubleClickDemo {
 				"security.mixed_content.block_display_content", false);
 
 		// Variable declaration
-		WebDriver driver = new FirefoxDriver(firefoxProfile);
+		WebDriver driver = new FirefoxDriver();
 
 		String url = "http://dl.dropbox.com/u/55228056/DoubleClickDemo.html";
 

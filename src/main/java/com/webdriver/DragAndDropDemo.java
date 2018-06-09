@@ -22,7 +22,7 @@ public class DragAndDropDemo {
 		firefoxProfile.setPreference(
 				"security.mixed_content.block_display_content", false);
 
-		WebDriver driver = new FirefoxDriver(firefoxProfile);
+		WebDriver driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(20000, TimeUnit.MILLISECONDS);
 
 		String url = "http://dl.dropbox.com/u/55228056/DragDropDemo.html";

@@ -1,6 +1,5 @@
 package com.webdriver;
 
-import org.ini4j.Options;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -20,7 +19,7 @@ public class ExplicitWaitDemo {
 
 		String url = "http://www.google.com";
 
-		WebDriver driver = new FirefoxDriver(firefoxProfile);
+		WebDriver driver = new FirefoxDriver();
 		driver.get(url);
 		WebElement query = driver.findElement(By.name("q"));
 		query.sendKeys("selenium");

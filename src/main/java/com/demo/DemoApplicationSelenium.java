@@ -50,7 +50,6 @@ public class DemoApplicationSelenium {
 					.getScreenshotAs(OutputType.FILE);
 			FileUtils.copyFile(srcFile, new File("C:\\tmp\\screenshot_"
 					+ Calendar.getInstance().getTimeInMillis() + ".png"));
-
 		} catch (Exception e) {
 			System.out.println(e.toString());
 		}
