@@ -6,7 +6,7 @@ import java.util.Properties;
 public class Locator {
 
 	public enum LocatorStrategy {
-		ID, XPATH, CLASSNAME, TEXT, LINKTEXT
+		ID, XPATH, CLASSNAME, LINKTEXT
 	};
 
 	private String locator_id;
@@ -61,9 +61,6 @@ public class Locator {
 			break;
 		case "CLASSNAME":
 			locator_strategy = LocatorStrategy.CLASSNAME;
-			break;
-		case "TEXT":
-			locator_strategy = LocatorStrategy.TEXT;
 			break;
 		default:
 			throw new Exception("Invalid locator strategy - "

@@ -22,14 +22,12 @@ public class Browser {
 		WebDriver driver = null;
 
 		switch (browser_type) {
-		case Firefox: {
+		case Firefox:
 			driver = new FirefoxDriver();
-		}
 			break;
 
-		case Chrome: {
+		case Chrome:
 			driver = new ChromeDriver();
-		}
 			break;
 
 		default:

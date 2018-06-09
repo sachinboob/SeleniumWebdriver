@@ -104,7 +104,14 @@ public class DemoApplicationSelenium {
 		// switch back to parent window
 		driver.switchTo().window(parentWindowHandle);
 
+		// ajax loading
+		WebElement ajaxDiv = null;
+		ajaxDiv = getElementWithWait(Locator.getInstance(
+				"homepage_chapter1.div.ajaxpage.strategy",
+				"homepage_chapter1.div.ajaxpage.locator"), driver, 1L);
+		ajaxDiv.click();
+
 		// close browser
-		driver.quit();
+		// driver.quit();
 	}
 }
