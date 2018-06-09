@@ -38,12 +38,13 @@ public class Locator {
 	}
 
 	/**
-	 * @param locator_key
-	 * @param locator_strategy
+	 * @param locator_strategy_key
+	 * @param locator_value_key
 	 * @return
+	 * @throws Exception
 	 */
 	public static Locator getInstance(String locator_strategy_key,
-			String locator_key) throws Exception {
+			String locator_value_key) throws Exception {
 
 		LocatorStrategy locator_strategy = null;
 
@@ -69,7 +70,7 @@ public class Locator {
 					+ locator_strategy_key);
 
 		}
-		return new Locator(properties.getProperty(locator_key),
+		return new Locator(properties.getProperty(locator_value_key),
 				locator_strategy);
 	}
 

@@ -5,6 +5,7 @@ import static com.driver.utils.ElementFinder.getElementWithWait;
 
 import java.io.File;
 import java.util.Calendar;
+import java.util.Iterator;
 import java.util.TimeZone;
 
 import org.apache.commons.io.FileUtils;
@@ -26,8 +27,10 @@ public class DemoApplicationSelenium {
 
 		WebDriver driver;
 		String baseUrl;
+		String parentWindowHandle;
 		baseUrl = "http://book.theautomatedtester.co.uk";
-		driver = Browser.getInstance(Browser.BrowserType.Chrome, baseUrl);
+		driver = Browser.getInstance(Browser.BrowserType.Firefox, baseUrl);
+		parentWindowHandle = driver.getWindowHandle();
 
 		// Move to chapter1 page
 		System.out.println("Clicking on chapter1");
@@ -59,12 +62,53 @@ public class DemoApplicationSelenium {
 		Thread.sleep(5000L);
 
 		// navigate back to home page
-		System.out
-				.println("Navigating back to home page by pressing back button");
-		driver.navigate().back();
+		// System.out
+		// .println("Navigating back to home page by pressing back button");
+		// driver.navigate().back();
 
-		// navigate to a different page using navigate method
-		Thread.sleep(5000L);
-		driver.navigate().to("http://www.sangeetagruhaudyog.com");
+		// click on div to open second widnow
+		System.out.println("Clicking on div to open second window");
+		getElementWithWait(
+				Locator.getInstance(
+						"homepage_chapter1.multiwindow_div.strategy",
+						"homepage_chapter1.multiwindow_div.locator"), driver)
+				.click();
+
+		// Switch to second window
+		// Iterate over all window handles and find out appropriate window
+		// handle to switch to
+		Iterator<String> windowHandleIterator = driver.getWindowHandles()
+				.iterator();
+
+		String windowHandle = null;
+		while (windowHandleIterator.hasNext()) {
+			windowHandle = windowHandleIterator.next();
+			driver.switchTo().window(windowHandle);
+
+			WebElement closePopupDiv = null;
+			try {
+				System.out.println("Current window URL is - "
+						+ driver.getCurrentUrl());
+				closePopupDiv = getElementWithWait(Locator.getInstance(
+						"chapter1_childwindow.closepopup_paragraph.strategy",
+						"chapter1_childwindow.closepopup_paragraph.locator"),
+						driver);
+			} catch (Exception e) {
+				System.out.println("Element not found");
+			}
+
+			if (closePopupDiv != null) {
+				System.out.println("Child window found - " + windowHandle);
+				System.out.println("Closing child window");
+
+				closePopupDiv.click();
+			}
+		}
+
+		// switch back to parent window
+		driver.switchTo().window(parentWindowHandle);
+
+		// close browser
+		driver.quit();
 	}
 }
