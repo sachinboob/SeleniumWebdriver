@@ -25,7 +25,7 @@ public class DemoApplicationSelenium {
 		String baseUrl;
 		String parentWindowHandle;
 		baseUrl = "http://book.theautomatedtester.co.uk";
-		driver = Browser.getInstance(Browser.BrowserType.Firefox, baseUrl);
+		driver = Browser.getInstance(Browser.BrowserType.Chrome, baseUrl);
 		parentWindowHandle = driver.getWindowHandle();
 
 		// Move to chapter1 page
