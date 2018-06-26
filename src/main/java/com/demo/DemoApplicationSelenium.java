@@ -112,5 +112,7 @@ public class DemoApplicationSelenium {
 
 		// close browser
 		// driver.quit();
+		
+		// Added a comment to test how it works with pull
 	}
 }
