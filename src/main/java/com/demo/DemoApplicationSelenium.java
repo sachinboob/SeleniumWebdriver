@@ -103,13 +103,19 @@ public class DemoApplicationSelenium {
 		// switch back to parent window
 		driver.switchTo().window(parentWindowHandle);
 
-		// ajax loading
+		// ajax loading by clicking div tag
 		WebElement ajaxDiv = null;
 		ajaxDiv = getElementWithWait(Locator.getInstance(
 				"homepage_chapter1.div.ajaxpage.strategy",
 				"homepage_chapter1.div.ajaxpage.locator"), driver, 1L);
 		ajaxDiv.click();
 
+		// ajax loading by clicking button
+		WebElement ajaxButton = getElement(Locator.getInstance(
+				"homepage_chapter1.button.ajaxbutton.strategy",
+				"homepage_chapter1.button.ajaxbutton.locator"), driver);
+		ajaxButton.click();
+		
 		// close browser
 		// driver.quit();
 	}
