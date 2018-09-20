@@ -3,6 +3,9 @@ package com.driver.utils;
 import java.io.FileReader;
 import java.util.Properties;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 public class Locator {
 
 	public enum LocatorStrategy {
@@ -12,12 +15,12 @@ public class Locator {
 	private String locator_id;
 	private LocatorStrategy locator_strategy;
 	private static Properties properties = null;
+	private static final Logger logger = LogManager.getLogger(Locator.class);
 
 	static {
 		try {
 			properties = new Properties();
-			properties.load(new FileReader(
-					"./src/test/resources/properties/locators.properties"));
+			properties.load(new FileReader("./src/test/resources/properties/locators.properties"));
 		} catch (Exception e) {
 			System.out.println("Exception occurred while loading properties.");
 			e.printStackTrace();
@@ -27,14 +30,18 @@ public class Locator {
 	}
 
 	/**
-	 * @param locator_id
-	 *            locator string path (xpath / id value / classname value)
+	 * @param locator_id       locator string path (xpath / id value / classname
+	 *                         value)
 	 * @param locator_strategy
 	 */
 	private Locator(String locator_id, LocatorStrategy locator_strategy) {
 		super();
 		this.locator_id = locator_id;
 		this.locator_strategy = locator_strategy;
+		logger.info("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
+		logger.debug("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
+		logger.error("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
+		logger.trace("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
 	}
 
 	/**
@@ -43,8 +50,7 @@ public class Locator {
 	 * @return
 	 * @throws Exception
 	 */
-	public static Locator getInstance(String locator_strategy_key,
-			String locator_value_key) throws Exception {
+	public static Locator getInstance(String locator_strategy_key, String locator_value_key) throws Exception {
 
 		LocatorStrategy locator_strategy = null;
 
@@ -63,12 +69,10 @@ public class Locator {
 			locator_strategy = LocatorStrategy.CLASSNAME;
 			break;
 		default:
-			throw new Exception("Invalid locator strategy - "
-					+ locator_strategy_key);
+			throw new Exception("Invalid locator strategy - " + locator_strategy_key);
 
 		}
-		return new Locator(properties.getProperty(locator_value_key),
-				locator_strategy);
+		return new Locator(properties.getProperty(locator_value_key), locator_strategy);
 	}
 
 	/**
@@ -79,8 +83,7 @@ public class Locator {
 	}
 
 	/**
-	 * @param locator_id
-	 *            the locator_id to set
+	 * @param locator_id the locator_id to set
 	 */
 	public void setLocator_id(String locator_id) {
 		this.locator_id = locator_id;
@@ -94,8 +97,7 @@ public class Locator {
 	}
 
 	/**
-	 * @param locator_strategy
-	 *            the locator_strategy to set
+	 * @param locator_strategy the locator_strategy to set
 	 */
 	public void setLocator_strategy(LocatorStrategy locator_strategy) {
 		this.locator_strategy = locator_strategy;
