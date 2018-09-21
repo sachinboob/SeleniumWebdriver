@@ -38,10 +38,10 @@ public class Locator {
 		super();
 		this.locator_id = locator_id;
 		this.locator_strategy = locator_strategy;
-		logger.info("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
-		logger.debug("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
-		logger.error("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
-		logger.trace("Insantiated Locator using id={0} and strategy={1}", locator_id, locator_strategy);
+		logger.info("Instantiated Locator using id={} and strategy={}", locator_id, locator_strategy);
+		logger.debug("Instantiated Locator using id={} and strategy={}", locator_id, locator_strategy);
+		logger.error("Instantiated Locator using id={} and strategy={}", locator_id, locator_strategy);
+		logger.trace("Instantiated Locator using id={} and strategy={}", locator_id, locator_strategy);
 	}
 
 	/**

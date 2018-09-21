@@ -1,28 +1,28 @@
-2018-09-20 17:27:22,577 INFO c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:22,580 DEBUG c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:22,580 ERROR c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:22,580 TRACE c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:22,845 INFO c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:22,845 DEBUG c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:22,845 ERROR c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:22,846 TRACE c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:28,624 INFO c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:28,624 DEBUG c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:28,624 ERROR c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:28,625 TRACE c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:29,072 INFO c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:29,072 DEBUG c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:29,072 ERROR c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:29,072 TRACE c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,242 INFO c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,242 DEBUG c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,243 ERROR c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,243 TRACE c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,518 INFO c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,519 DEBUG c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,519 ERROR c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,519 TRACE c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,656 INFO c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,656 DEBUG c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,656 ERROR c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
-2018-09-20 17:27:34,656 TRACE c.d.u.Locator [main] Insantiated Locator using id={0} and strategy={1}
+21-09-2018 10:30:41 INFO  com.driver.utils.Locator:41  Insantiated Locator using id=Chapter1 and strategy=LINKTEXT
+21-09-2018 10:30:41 DEBUG com.driver.utils.Locator:42  Insantiated Locator using id=Chapter1 and strategy=LINKTEXT
+21-09-2018 10:30:41 ERROR com.driver.utils.Locator:43  Insantiated Locator using id=Chapter1 and strategy=LINKTEXT
+21-09-2018 10:30:41 TRACE com.driver.utils.Locator:44  Insantiated Locator using id=Chapter1 and strategy=LINKTEXT
+21-09-2018 10:30:41 INFO  com.driver.utils.Locator:41  Insantiated Locator using id=radiobutton and strategy=ID
+21-09-2018 10:30:41 DEBUG com.driver.utils.Locator:42  Insantiated Locator using id=radiobutton and strategy=ID
+21-09-2018 10:30:41 ERROR com.driver.utils.Locator:43  Insantiated Locator using id=radiobutton and strategy=ID
+21-09-2018 10:30:41 TRACE com.driver.utils.Locator:44  Insantiated Locator using id=radiobutton and strategy=ID
+21-09-2018 10:30:47 INFO  com.driver.utils.Locator:41  Insantiated Locator using id=multiplewindow and strategy=CLASSNAME
+21-09-2018 10:30:47 DEBUG com.driver.utils.Locator:42  Insantiated Locator using id=multiplewindow and strategy=CLASSNAME
+21-09-2018 10:30:47 ERROR com.driver.utils.Locator:43  Insantiated Locator using id=multiplewindow and strategy=CLASSNAME
+21-09-2018 10:30:47 TRACE com.driver.utils.Locator:44  Insantiated Locator using id=multiplewindow and strategy=CLASSNAME
+21-09-2018 10:30:48 INFO  com.driver.utils.Locator:41  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:48 DEBUG com.driver.utils.Locator:42  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:48 ERROR com.driver.utils.Locator:43  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:48 TRACE com.driver.utils.Locator:44  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:53 INFO  com.driver.utils.Locator:41  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:53 DEBUG com.driver.utils.Locator:42  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:53 ERROR com.driver.utils.Locator:43  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:53 TRACE com.driver.utils.Locator:44  Insantiated Locator using id=closepopup and strategy=ID
+21-09-2018 10:30:53 INFO  com.driver.utils.Locator:41  Insantiated Locator using id=loadajax and strategy=CLASSNAME
+21-09-2018 10:30:53 DEBUG com.driver.utils.Locator:42  Insantiated Locator using id=loadajax and strategy=CLASSNAME
+21-09-2018 10:30:53 ERROR com.driver.utils.Locator:43  Insantiated Locator using id=loadajax and strategy=CLASSNAME
+21-09-2018 10:30:53 TRACE com.driver.utils.Locator:44  Insantiated Locator using id=loadajax and strategy=CLASSNAME
+21-09-2018 10:30:53 INFO  com.driver.utils.Locator:41  Insantiated Locator using id=.//input[@value='load text to the page'] and strategy=XPATH
+21-09-2018 10:30:53 DEBUG com.driver.utils.Locator:42  Insantiated Locator using id=.//input[@value='load text to the page'] and strategy=XPATH
+21-09-2018 10:30:53 ERROR com.driver.utils.Locator:43  Insantiated Locator using id=.//input[@value='load text to the page'] and strategy=XPATH
+21-09-2018 10:30:53 TRACE com.driver.utils.Locator:44  Insantiated Locator using id=.//input[@value='load text to the page'] and strategy=XPATH
