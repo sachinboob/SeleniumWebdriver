@@ -1,9 +1,15 @@
 package com.driver.utils;
 
+import java.util.logging.Level;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.logging.LogType;
+import org.openqa.selenium.logging.LoggingPreferences;
+import org.openqa.selenium.remote.CapabilityType;
 
 public class Browser {
 
@@ -19,7 +25,7 @@ public class Browser {
 				"./src/test/resources/drivers/chromedriver_win32/chromedriver.exe");
 	}
 
-	public static WebDriver getInstance(BrowserType browser_type) {
+	public static WebDriver getInstance(BrowserType browser_type) throws Exception{
 
 		WebDriver driver = null;
 
@@ -31,17 +37,21 @@ public class Browser {
 			break;
 
 		case Chrome:
-			driver = new ChromeDriver();
+			LoggingPreferences preferences = new LoggingPreferences();
+			preferences.enable(LogType.PERFORMANCE, Level.ALL);
+			ChromeOptions option = new ChromeOptions();
+			option.setCapability(CapabilityType.LOGGING_PREFS, preferences);
+			driver = new ChromeDriver(option);
 			break;
 
 		default:
-			System.out.println("No matching case found for browser type " + browser_type);
+			throw new Exception("No matching case found for browser type " + browser_type);
 		}
 
 		return driver;
 	}
 
-	public static WebDriver getInstance(BrowserType browser_type, String url) {
+	public static WebDriver getInstance(BrowserType browser_type, String url)throws Exception {
 
 		WebDriver driver = null;
 
