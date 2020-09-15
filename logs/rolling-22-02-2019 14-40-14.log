@@ -1,0 +1,9 @@
+22-02-2019 14:40:01 [DEBUG] action.core.ActionPerformer:50  Default constructor
+22-02-2019 14:40:01 [INFO ] action.core.ActionPerformer:143 Locator Expression - ID=selecttype, Element Locator - By.id: selecttype, Option to select - Selenium Core
+22-02-2019 14:40:01 [INFO ] action.core.ActionPerformer:130 Element Locator - By.id: selecttype, Option to select - Selenium Core
+22-02-2019 14:40:05 [INFO ] action.core.ActionPerformer:143 Locator Expression - ID=selecttype, Element Locator - By.id: selecttype, Option to select - Selenium IDE
+22-02-2019 14:40:05 [INFO ] action.core.ActionPerformer:130 Element Locator - By.id: selecttype, Option to select - Selenium IDE
+22-02-2019 14:40:09 [INFO ] action.core.ActionPerformer:143 Locator Expression - ID=selecttype, Element Locator - By.id: selecttype, Option to select - Selenium RC
+22-02-2019 14:40:09 [INFO ] action.core.ActionPerformer:130 Element Locator - By.id: selecttype, Option to select - Selenium RC
+22-02-2019 14:40:14 [INFO ] action.core.ActionPerformer:143 Locator Expression - ID=selecttype, Element Locator - By.id: selecttype, Option to select - Selenium GRid
+22-02-2019 14:40:14 [INFO ] action.core.ActionPerformer:130 Element Locator - By.id: selecttype, Option to select - Selenium GRid

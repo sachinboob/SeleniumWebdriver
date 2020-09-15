@@ -10,13 +10,6 @@
 			</PatternLayout>
 			<OnStartupTriggeringPolicy />
 		</RollingFile>
-		<!-- This appender is not used. Only rolling file appender is used 
-		<File name="MyFile" fileName="./logs/app.log">
-			<PatternLayout>
-				<Pattern>%d %p %c [%t] %m%n</Pattern>
-			</PatternLayout>
-		</File>
-		 -->
 	</Appenders>
 	<Loggers>
 		<Root level="trace">

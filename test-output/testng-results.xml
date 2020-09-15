@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="15591" started-at="2019-09-24T08:48:42Z" finished-at="2019-09-24T08:48:57Z">
+    <groups>
+      <group name="Group_1">
+        <method signature="TestNGTests.test_1()[pri:0, instance:com.demo.TestNGTests@4a87761d]" name="test_1" class="com.demo.TestNGTests"/>
+      </group> <!-- Group_1 -->
+    </groups>
+    <test name="Default test" duration-ms="15591" started-at="2019-09-24T08:48:42Z" finished-at="2019-09-24T08:48:57Z">
+      <class name="com.demo.TestNGTests">
+        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.demo.TestNGTests@4a87761d]" name="beforeTest" is-config="true" duration-ms="8234" started-at="2019-09-24T08:48:42Z" finished-at="2019-09-24T08:48:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTest -->
+        <test-method status="PASS" signature="test_1()[pri:0, instance:com.demo.TestNGTests@4a87761d]" name="test_1" duration-ms="7317" started-at="2019-09-24T08:48:50Z" finished-at="2019-09-24T08:48:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_1 -->
+      </class> <!-- com.demo.TestNGTests -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

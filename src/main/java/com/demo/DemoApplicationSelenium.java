@@ -5,6 +5,7 @@ import java.util.Calendar;
 import java.util.Iterator;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -15,27 +16,51 @@ import org.openqa.selenium.logging.LogType;
 
 import com.driver.utils.Browser;
 
+import action.core.ActionPerformer;
+
 public class DemoApplicationSelenium {
 
 	public static void main(String[] args) throws Exception {
 
-
 		WebDriver driver;
 		String baseUrl;
 		String parentWindowHandle;
-		baseUrl = "http://book.theautomatedtester.co.uk";
+		baseUrl = "https://test.salesforce.com";
 		driver = Browser.getInstance(Browser.BrowserType.Chrome, baseUrl);
 		parentWindowHandle = driver.getWindowHandle();
 
 //		ActionUtils action = new ActionUtils(driver);
 
+//		ActionPerformer myActionPerformer = new ActionPerformer(driver);
+
 		// Move to chapter1 page
-		System.out.println("Clicking on chapter1");
-//		getElement(Locator.getInstance("homepage.chapter1.link.strategy", "homepage.chapter1.link.locator"), driver)
-//				.click();
+//		System.out.println("Clicking on BMW");
+
+		System.out.println("Username ----------------" + driver.findElement(By.id("username")).isDisplayed());
+
+		System.out.println("Username hidden field ----------------"
+				+ driver.findElement(By.xpath("//input[@type='hidden' and @name='ExtraLog']")).isDisplayed());
+
+		// Fill forms
+		driver.findElement(By.id("username")).sendKeys("testusersfdc@infobloxinc.com.uat");
+		Thread.sleep(5000L);
+		driver.findElement(By.id("password")).sendKeys("jade@1234");
+		Thread.sleep(5000L);
+		driver.findElement(By.id("Login")).click();
+
+		Thread.sleep(30000L);
+
+//		"//*[normalize-space(text())='Accounts']//ancestor::one-app-nav-bar-item-root
+
+		System.out.println("Accounts ********* "
+				+ driver.findElement(By.xpath("//*[normalize-space(text())='Accounts']")).isDisplayed());
+
+//		System.out.println(driver.findElement(By.xpath(".//div[not(@id)]")).isDisplayed());
+
+//		myActionPerformer.click(By.xpath(".//label[@for='bmw']"));
 
 //		try {
-//			action.click("linktext=Chapter1877=482834");
+//			myActionPerformer.click(By.xpath(".//label[@for='bmw']"));
 //		} catch (Exception e) {
 //			e.printStackTrace();
 //		}
